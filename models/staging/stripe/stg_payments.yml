@@ -6,15 +6,21 @@ models:
         - name: customer_id
           tests:
             - not_null
+            - relationships:
+                to: ref('customers')
+                field: customer_id
         - name: order_id
           tests:
             - not_null
+            - relationships:
+                to: ref('orders')
+                field: order_id
         - name: payment_method
           tests:
             - not_null
         - name: payment_amount
           tests:
             - not_null
-        - name: order_created
+        - name: payment_created
           tests:
             - not_null

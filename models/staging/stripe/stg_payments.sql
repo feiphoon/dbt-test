@@ -6,7 +6,7 @@ with payments as (
         paymentmethod as payment_method,
         status,
         amount/100 as payment_amount,
-        created as order_created
+        created as payment_created
 
     from stripe.payment
 
