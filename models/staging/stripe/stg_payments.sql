@@ -1,13 +1,14 @@
 with payments as (
 
     select
+        id as customer_id,
         orderid as order_id,
         paymentmethod as payment_method,
         status,
-        amount as payment_amount,
+        amount/100 as payment_amount,
         created as order_created
 
-    from stripe.payments
+    from stripe.payment
 
 )
 
