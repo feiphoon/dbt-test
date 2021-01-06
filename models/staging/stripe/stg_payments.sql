@@ -8,7 +8,7 @@ with payments as (
         amount/100 as payment_amount,
         created as payment_created
 
-    from stripe.payment
+    from {{ source('stripe', 'payment') }}
 
 )
 
